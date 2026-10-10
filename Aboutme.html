@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Focus Well</title>
+
+    <!-- Google Fonts Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Caveat:wght@500&family=Great+Vibes&family=Sacramento&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      font-family: &quot;Helvetica Neue&quot;, Arial, sans-serif;
+      box-sizing: border-box;
+      background-color: #121212;
+      color: #ffffff;
+      width: 100%;
+      overflow-x: hidden;
+    "
+  >
+    <header
+      style="
+        position: relative;
+        width: 100%;
+        min-height: 35vh;
+        background-image: url(&quot;image/Home1.jpeg&quot;);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      "
+    >
+      <nav
+        id="main-nav"
+        style="
+          position: sticky;
+          top: 0;
+          left: 0;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 4%;
+          box-sizing: border-box;
+          row-gap: 15px;
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          z-index: 1000;
+        "
+      >
+        <div
+          style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap"
+        >
+          <a
+            href="index.html"
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-family: &quot;Great Vibes&quot;, cursive;
+              font-size: 60px;
+              font-weight: normal;
+              letter-spacing: 1px;
+              line-height: 1;
+            "
+          >
+            Focus well
+          </a>
+          <p
+            style="
+              margin: 0;
+              padding-left: 16px;
+              border-left: 1px solid rgba(255, 255, 255, 0.25);
+              color: #aaaaaa;
+              font-family: &quot;Helvetica Neue&quot;, Arial, sans-serif;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              line-height: 1.4;
+              max-width: 220px;
+            "
+          >
+            Because paying attention in class clearly wasn't working
+          </p>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: clamp(10px, 2.5vw, 25px);
+            align-items: center;
+          "
+        >
+          <a
+            href="index.html"
+            onmouseover="
+              this.style.textShadow = '0 0 10px #ffffff, 0 0 20px #ffffff';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.textShadow = 'none';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: clamp(11px, 2.5vw, 13px);
+              font-weight: 500;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              opacity: 0.85;
+              display: inline-block;
+              transition: all 0.2s ease;
+              padding-bottom: 3px;
+            "
+          >
+            Home
+          </a>
+
+          <a
+            href="Gallery.html"
+            onmouseover="
+              this.style.textShadow = '0 0 10px #ffffff, 0 0 20px #ffffff';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.textShadow = 'none';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: clamp(11px, 2.5vw, 13px);
+              font-weight: 500;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              opacity: 0.85;
+              display: inline-block;
+              transition: all 0.2s ease;
+              padding-bottom: 3px;
+            "
+          >
+            Gallery
+          </a>
+
+          <div
+            onmouseover="
+              document.getElementById('tags-menu').style.display = 'flex';
+              document.getElementById('tags-btn').style.textShadow =
+                '0 0 10px #ffffff, 0 0 20px #ffffff';
+              document.getElementById('tags-btn').style.transform =
+                'translateY(-2px)';
+            "
+            onmouseout="
+              document.getElementById('tags-menu').style.display = 'none';
+              document.getElementById('tags-btn').style.textShadow = 'none';
+              document.getElementById('tags-btn').style.transform =
+                'translateY(0)';
+            "
+            style="position: relative; display: inline-block"
+          >
+            <a
+              id="tags-btn"
+              href="Gallery.html"
+              style="
+                color: #ffffff;
+                text-decoration: none;
+                font-size: clamp(11px, 2.5vw, 13px);
+                font-weight: 500;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                opacity: 0.85;
+                display: inline-block;
+                transition: all 0.2s ease;
+                padding-bottom: 3px;
+              "
+            >
+              Tags &#9662;
+            </a>
+
+            <div
+              id="tags-menu"
+              style="
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: rgba(18, 18, 18, 0.95);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 6px;
+                padding: 8px 0;
+                min-width: 160px;
+                flex-direction: column;
+                gap: 2px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+                z-index: 1000;
+              "
+            >
+              <a
+                href="Gallery.html#landscape"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Landscape</a
+              >
+              <a
+                href="Gallery.html#portrait"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Portrait</a
+              >
+              <a
+                href="Gallery.html#urban"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Urban</a
+              >
+              <a
+                href="Gallery.html#macro"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Macro</a
+              >
+              <a
+                href="Gallery.html#automotive"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Automotive</a
+              >
+            </div>
+          </div>
+
+          <a
+            href="Equipment.html"
+            onmouseover="
+              this.style.textShadow = '0 0 10px #ffffff, 0 0 20px #ffffff';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.textShadow = 'none';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: clamp(11px, 2.5vw, 13px);
+              font-weight: 500;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              opacity: 0.85;
+              display: inline-block;
+              transition: all 0.2s ease;
+              padding-bottom: 3px;
+            "
+          >
+            Equipment
+          </a>
+
+          <a
+            href="Aboutme.html"
+            onmouseover="
+              this.style.textShadow = '0 0 10px #ffffff, 0 0 20px #ffffff';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.textShadow = 'none';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: clamp(11px, 2.5vw, 13px);
+              font-weight: 500;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              opacity: 0.85;
+              display: inline-block;
+              border-bottom: 2px solid #ffffff;
+              transition: all 0.2s ease;
+              padding-bottom: 3px;
+            "
+          >
+            About Me
+          </a>
+        </div>
+      </nav>
+
+      <div
+        style="
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 140px; /* Reduced so it only softens the bottom edge */
+          background: linear-gradient(
+            to bottom,
+            rgba(18, 18, 18, 0) 0%,
+            rgba(18, 18, 18, 0.4) 50%,
+            #121212 100%
+          );
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          mask-image: linear-gradient(to bottom, transparent 0%, black 80%);
+          -webkit-mask-image: linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 80%
+          );
+          pointer-events: none;
+        "
+      ></div>
+    </header>
+
+    <main
+      style="
+        padding: clamp(30px, 5vw, 60px) 4%;
+        box-sizing: border-box;
+        max-width: 1300px;
+        margin: 0 auto;
+      "
+    >
+      <section
+        id="aboutme"
+        style="
+          width: 100%;
+          max-width: 1100px;
+          margin: 0 auto 100px auto;
+          padding: 0 20px;
+          box-sizing: border-box;
+        "
+      >
+        <div style="text-align: center; margin-bottom: 44px">
+          <p
+            style="
+              color: #888888;
+              font-size: 12px;
+              letter-spacing: 3px;
+              text-transform: uppercase;
+              margin: 0 0 10px 0;
+            "
+          >
+            Behind The Lens
+          </p>
+          <h2
+            style="
+              font-size: clamp(24px, 3.5vw, 34px);
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              font-weight: 400;
+              margin: 0;
+            "
+          >
+            About Me
+          </h2>
+          <div
+            style="
+              width: 40px;
+              height: 1px;
+              background: rgba(255, 255, 255, 0.35);
+              margin: 18px auto 0 auto;
+            "
+          ></div>
+        </div>
+        <div
+          onmouseover="
+            this.style.transform = 'translateY(-4px)';
+            this.style.boxShadow = '0 22px 50px rgba(0,0,0,0.85)';
+            this.style.borderColor = 'rgba(255,255,255,0.18)';
+          "
+          onmouseout="
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 15px 40px rgba(0,0,0,0.7)';
+            this.style.borderColor = 'rgba(255,255,255,0.08)';
+          "
+          style="
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+            padding: clamp(24px, 4vw, 54px);
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            gap: clamp(28px, 4vw, 56px);
+            align-items: center;
+            justify-content: center;
+            transition:
+              transform 0.3s ease,
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+          "
+        >
+          <div
+            style="
+              flex: 1 1 320px;
+              max-width: 420px;
+              text-align: center;
+              overflow: hidden;
+              border-radius: 6px;
+              box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+            "
+          >
+            <img
+              src="image/Me.JPG"
+              alt="Karol Khodee B. Janayan"
+              onmouseover="this.style.transform = 'scale(1.04)'"
+              onmouseout="this.style.transform = 'scale(1)'"
+              style="
+                width: 100%;
+                aspect-ratio: 4 / 5;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.5s ease;
+              "
+            />
+          </div>
+          <div
+            style="
+              flex: 1 1 360px;
+              max-width: 520px;
+              display: flex;
+              flex-direction: column;
+            "
+          >
+            <p
+              style="
+                color: #888888;
+                font-size: 12px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                margin: 0 0 8px 0;
+              "
+            >
+              Student &bull; Photographer
+            </p>
+            <h3
+              style="
+                font-size: clamp(26px, 3.5vw, 36px);
+                letter-spacing: 1px;
+                margin: 0 0 4px 0;
+                color: #ffffff;
+                font-weight: 500;
+              "
+            >
+              Karol Khodee B. Janayan
+            </h3>
+            <p
+              style="
+                font-family: &quot;Great Vibes&quot;, cursive;
+                font-size: 34px;
+                color: rgba(255, 255, 255, 0.7);
+                margin: 0 0 18px 0;
+              "
+            >
+              Focus well
+            </p>
+            <p
+              style="
+                color: #d0d0d0;
+                font-size: 15px;
+                line-height: 1.85;
+                margin: 0 0 28px 0;
+                font-weight: 300;
+              "
+            >
+              "Just a student trying to capture every moment. It's strictly a
+              hobby (though I can still be your bebe—jokes aside!), but I'm
+              always practicing to make my skills as sharp as my photos. For me,
+              it's simply about freezing a memory so we can always look back at
+              the genuine way people smile at the lens."
+            </p>
+            <table
+              style="
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 13px;
+                margin-bottom: 30px;
+              "
+            >
+              <tr
+                onmouseover="this.style.background = 'rgba(255,255,255,0.04)'"
+                onmouseout="this.style.background = 'transparent'"
+                style="
+                  border-top: 1px solid rgba(255, 255, 255, 0.08);
+                  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                  transition: background 0.2s ease;
+                "
+              >
+                <td
+                  style="
+                    padding: 13px 8px;
+                    color: #888888;
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                    width: 36%;
+                    vertical-align: middle;
+                    line-height: 1.5;
+                  "
+                >
+                  Specialty
+                </td>
+                <td
+                  style="
+                    padding: 13px 8px;
+                    color: #ffffff;
+                    line-height: 1.5;
+                    vertical-align: middle;
+                  "
+                >
+                  Landscape, Portrait, Urban, Macro &amp; Automotive
+                </td>
+              </tr>
+              <tr
+                onmouseover="this.style.background = 'rgba(255,255,255,0.04)'"
+                onmouseout="this.style.background = 'transparent'"
+                style="
+                  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                  transition: background 0.2s ease;
+                "
+              >
+                <td
+                  style="
+                    padding: 13px 8px;
+                    color: #888888;
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                    width: 36%;
+                    vertical-align: middle;
+                    line-height: 1.5;
+                  "
+                >
+                  Camera
+                </td>
+                <td
+                  style="
+                    padding: 13px 8px;
+                    color: #ffffff;
+                    line-height: 1.5;
+                    vertical-align: middle;
+                  "
+                >
+                  Canon EOS 1200D DSLR
+                </td>
+              </tr>
+              <tr
+                onmouseover="this.style.background = 'rgba(255,255,255,0.04)'"
+                onmouseout="this.style.background = 'transparent'"
+                style="
+                  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+                  transition: background 0.2s ease;
+                "
+              >
+                <td
+                  style="
+                    padding: 13px 8px;
+                    color: #888888;
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                    width: 36%;
+                    vertical-align: middle;
+                    line-height: 1.5;
+                  "
+                >
+                  Academic Year
+                </td>
+                <td
+                  style="
+                    padding: 13px 8px;
+                    color: #ffffff;
+                    line-height: 1.5;
+                    vertical-align: middle;
+                  "
+                >
+                  A.Y. 2026&ndash;2027
+                </td>
+              </tr>
+            </table>
+            <div>
+              <a
+                href="mailto:janayankarolkhodee@gmail.com"
+                onmouseover="
+                  this.style.background = '#ffffff';
+                  this.style.color = '#000000';
+                  this.style.letterSpacing = '2.6px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.color = '#ffffff';
+                  this.style.letterSpacing = '2px';
+                "
+                style="
+                  display: inline-block;
+                  padding: 13px 30px;
+                  border: 1px solid rgba(255, 255, 255, 0.4);
+                  border-radius: 2px;
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 12px;
+                  letter-spacing: 2px;
+                  text-transform: uppercase;
+                  transition: all 0.25s ease;
+                "
+                >Get In Touch &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      style="
+        background: #0d0d0d;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        width: 100%;
+        padding: 50px 4% 30px 4%;
+        box-sizing: border-box;
+        text-align: center;
+        color: #ffffff;
+        font-family: &quot;Helvetica Neue&quot;, Arial, sans-serif;
+      "
+    >
+      <div
+        style="
+          max-width: 1100px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        "
+      >
+        <a
+          href="index.html"
+          style="
+            color: #ffffff;
+            text-decoration: none;
+            font-family: &quot;Great Vibes&quot;, cursive;
+            font-size: 42px;
+            letter-spacing: 1px;
+          "
+        >
+          Focus well
+        </a>
+
+        <div
+          style="
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+          "
+        >
+          <a
+            href="index.html"
+            style="
+              color: #888888;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              transition: color 0.2s ease;
+            "
+            onmouseover="this.style.color = '#ffffff'"
+            onmouseout="this.style.color = '#888888'"
+            >Home</a
+          >
+          <a
+            href="Gallery.html"
+            style="
+              color: #888888;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              transition: color 0.2s ease;
+            "
+            onmouseover="this.style.color = '#ffffff'"
+            onmouseout="this.style.color = '#888888'"
+            >Gallery</a
+          >
+          <a
+            href="Equipment.html"
+            style="
+              color: #888888;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              transition: color 0.2s ease;
+            "
+            onmouseover="this.style.color = '#ffffff'"
+            onmouseout="this.style.color = '#888888'"
+            >Equipment</a
+          >
+          <a
+            href="Aboutme.html"
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              transition: color 0.2s ease;
+              border-bottom: 1px solid #ffffff;
+            "
+            >About Me</a
+          >
+        </div>
+
+        <div
+          style="
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <a
+            href="https://www.instagram.com/kynn_janayan/"
+            target="_blank"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.2)';
+              this.style.transform = 'translateY(-3px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 16px;
+              transition: all 0.2s ease;
+            "
+          >
+            <i class="fa fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/ken.basco.96"
+            target="_blank"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.2)';
+              this.style.transform = 'translateY(-3px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 16px;
+              transition: all 0.2s ease;
+            "
+          >
+            <i class="fa fa-facebook"></i>
+          </a>
+
+          <a
+            href="mailto:janayankarolkhodee@gmail.com"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.2)';
+              this.style.transform = 'translateY(-3px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 16px;
+              transition: all 0.2s ease;
+            "
+          >
+            <i class="fa fa-envelope-o"></i>
+          </a>
+
+          <a
+            href="#top"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.2)';
+              this.style.transform = 'translateY(-3px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 16px;
+              transition: all 0.2s ease;
+            "
+          >
+            <i class="fa fa-arrow-up"></i>
+          </a>
+        </div>
+
+        <div
+          style="
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 20px;
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            font-size: 11px;
+            color: #666666;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+          "
+        >
+          <span>&copy; Karol Khodee B. Janayan &bull; All Rights Reserved</span>
+          <span>A.Y. 2026–2027</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,2264 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Focus Well</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Caveat:wght@500&family=Great+Vibes&family=Sacramento&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      font-family: &quot;Helvetica Neue&quot;, Arial, sans-serif;
+      box-sizing: border-box;
+      background-color: #121212;
+      color: #ffffff;
+      width: 100%;
+      overflow-x: hidden;
+    "
+  >
+    <header
+      style="
+        position: relative;
+        width: 100%;
+        min-height: 35vh;
+        background-image: url(&quot;image/Home1.jpeg&quot;);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      "
+    >
+      <nav
+        id="main-nav"
+        style="
+          position: sticky;
+          top: 0;
+          left: 0;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 4%;
+          box-sizing: border-box;
+          row-gap: 15px;
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          z-index: 1000;
+        "
+      >
+        <div
+          style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap"
+        >
+          <a
+            href="index.html"
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-family: &quot;Great Vibes&quot;, cursive;
+              font-size: 60px;
+              font-weight: normal;
+              letter-spacing: 1px;
+              line-height: 1;
+            "
+          >
+            Focus well
+          </a>
+          <p
+            style="
+              margin: 0;
+              padding-left: 16px;
+              border-left: 1px solid rgba(255, 255, 255, 0.25);
+              color: #aaaaaa;
+              font-family: &quot;Helvetica Neue&quot;, Arial, sans-serif;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              line-height: 1.4;
+              max-width: 220px;
+            "
+          >
+            Because paying attention in class clearly wasn't working
+          </p>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: clamp(10px, 2.5vw, 25px);
+            align-items: center;
+          "
+        >
+          <a
+            href="index.html"
+            onmouseover="
+              this.style.textShadow = '0 0 10px #ffffff, 0 0 20px #ffffff';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.textShadow = 'none';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: clamp(11px, 2.5vw, 13px);
+              font-weight: 500;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              opacity: 0.85;
+              display: inline-block;
+              transition: all 0.2s ease;
+              padding-bottom: 3px;
+            "
+          >
+            Home
+          </a>
+
+          <a
+            href="Gallery.html"
+            onmouseover="
+              this.style.textShadow = '0 0 10px #ffffff, 0 0 20px #ffffff';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.textShadow = 'none';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: clamp(11px, 2.5vw, 13px);
+              font-weight: 500;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              opacity: 0.85;
+              display: inline-block;
+              border-bottom: 2px solid #ffffff;
+              padding-bottom: 3px;
+              transition: all 0.2s ease;
+            "
+          >
+            Gallery
+          </a>
+
+          <div
+            onmouseover="
+              document.getElementById('tags-menu').style.display = 'flex';
+              document.getElementById('tags-btn').style.textShadow =
+                '0 0 10px #ffffff, 0 0 20px #ffffff';
+              document.getElementById('tags-btn').style.transform =
+                'translateY(-2px)';
+            "
+            onmouseout="
+              document.getElementById('tags-menu').style.display = 'none';
+              document.getElementById('tags-btn').style.textShadow = 'none';
+              document.getElementById('tags-btn').style.transform =
+                'translateY(0)';
+            "
+            style="position: relative; display: inline-block"
+          >
+            <a
+              id="tags-btn"
+              href="Gallery.html"
+              style="
+                color: #ffffff;
+                text-decoration: none;
+                font-size: clamp(11px, 2.5vw, 13px);
+                font-weight: 500;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                opacity: 0.85;
+                display: inline-block;
+                transition: all 0.2s ease;
+                padding-bottom: 3px;
+              "
+            >
+              Tags &#9662;
+            </a>
+
+            <div
+              id="tags-menu"
+              style="
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: rgba(18, 18, 18, 0.95);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 6px;
+                padding: 8px 0;
+                min-width: 160px;
+                flex-direction: column;
+                gap: 2px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+                z-index: 1000;
+              "
+            >
+              <a
+                href="Gallery.html#landscape"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Landscape</a
+              >
+              <a
+                href="Gallery.html#portrait"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Portrait</a
+              >
+              <a
+                href="Gallery.html#urban"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Urban</a
+              >
+              <a
+                href="Gallery.html#macro"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Macro</a
+              >
+              <a
+                href="Gallery.html#automotive"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Automotive</a
+              >
+            </div>
+          </div>
+
+          <a
+            href="Equipment.html"
+            onmouseover="
+              this.style.textShadow = '0 0 10px #ffffff, 0 0 20px #ffffff';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.textShadow = 'none';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: clamp(11px, 2.5vw, 13px);
+              font-weight: 500;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              opacity: 0.85;
+              display: inline-block;
+              transition: all 0.2s ease;
+              padding-bottom: 3px;
+            "
+          >
+            Equipment
+          </a>
+
+          <a
+            href="Aboutme.html"
+            onmouseover="
+              this.style.textShadow = '0 0 10px #ffffff, 0 0 20px #ffffff';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.textShadow = 'none';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: clamp(11px, 2.5vw, 13px);
+              font-weight: 500;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              opacity: 0.85;
+              display: inline-block;
+              transition: all 0.2s ease;
+              padding-bottom: 3px;
+            "
+          >
+            About Me
+          </a>
+        </div>
+      </nav>
+
+      <div
+        style="
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 140px;
+          background: linear-gradient(
+            to bottom,
+            rgba(18, 18, 18, 0) 0%,
+            rgba(18, 18, 18, 0.4) 50%,
+            #121212 100%
+          );
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          mask-image: linear-gradient(to bottom, transparent 0%, black 80%);
+          -webkit-mask-image: linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 80%
+          );
+          pointer-events: none;
+        "
+      ></div>
+    </header>
+
+    <main
+      style="
+        padding: clamp(30px, 5vw, 60px) 4%;
+        box-sizing: border-box;
+        max-width: 1300px;
+        margin: 0 auto;
+      "
+    >
+      <div
+        id="categories-index"
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 12px;
+          margin-bottom: 60px;
+          flex-wrap: wrap;
+        "
+      >
+        <a
+          href="#landscape"
+          onmouseover="
+            this.style.background = 'rgba(255,255,255,0.25)';
+            this.style.transform = 'translateY(-2px)';
+          "
+          onmouseout="
+            this.style.background = 'rgba(255,255,255,0.08)';
+            this.style.transform = 'translateY(0)';
+          "
+          style="
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            transition: all 0.2s ease;
+          "
+          >Landscape</a
+        >
+        <a
+          href="#portrait"
+          onmouseover="
+            this.style.background = 'rgba(255,255,255,0.25)';
+            this.style.transform = 'translateY(-2px)';
+          "
+          onmouseout="
+            this.style.background = 'rgba(255,255,255,0.08)';
+            this.style.transform = 'translateY(0)';
+          "
+          style="
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            transition: all 0.2s ease;
+          "
+          >Portrait</a
+        >
+        <a
+          href="#urban"
+          onmouseover="
+            this.style.background = 'rgba(255,255,255,0.25)';
+            this.style.transform = 'translateY(-2px)';
+          "
+          onmouseout="
+            this.style.background = 'rgba(255,255,255,0.08)';
+            this.style.transform = 'translateY(0)';
+          "
+          style="
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            transition: all 0.2s ease;
+          "
+          >Urban</a
+        >
+        <a
+          href="#macro"
+          onmouseover="
+            this.style.background = 'rgba(255,255,255,0.25)';
+            this.style.transform = 'translateY(-2px)';
+          "
+          onmouseout="
+            this.style.background = 'rgba(255,255,255,0.08)';
+            this.style.transform = 'translateY(0)';
+          "
+          style="
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            transition: all 0.2s ease;
+          "
+          >Macro</a
+        >
+        <a
+          href="#automotive"
+          onmouseover="
+            this.style.background = 'rgba(255,255,255,0.25)';
+            this.style.transform = 'translateY(-2px)';
+          "
+          onmouseout="
+            this.style.background = 'rgba(255,255,255,0.08)';
+            this.style.transform = 'translateY(0)';
+          "
+          style="
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 8px 18px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            transition: all 0.2s ease;
+          "
+          >Automotive</a
+        >
+      </div>
+      <!--Landscape-->
+      <section
+        id="landscape"
+        style="width: 100%; margin-bottom: 80px; box-sizing: border-box"
+      >
+        <div
+          style="
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 14px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+          "
+        >
+          <div>
+            <p
+              style="
+                color: #888888;
+                font-size: 11px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                margin: 0 0 6px 0;
+              "
+            >
+              Category
+            </p>
+            <h2
+              style="
+                font-size: clamp(22px, 3.5vw, 30px);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-weight: 400;
+                margin: 0;
+              "
+            >
+              Landscape & Scenery
+            </h2>
+          </div>
+          <a
+            href="#top"
+            style="
+              color: #777777;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+            "
+            >Back to top &uarr;</a
+          >
+        </div>
+        <div
+          style="
+            columns: 2 240px;
+            column-gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <a
+            href="image\Landscape\1.jpg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Landscape\1.jpg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Landscape\2.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Landscape\2.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+        </div>
+        <div
+          style="
+            columns: 3 240px;
+            column-gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <a
+            href="image\Landscape\4.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Landscape\4.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Landscape\8.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Landscape\8.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Landscape\9.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Landscape\9.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+        </div>
+        <div
+          style="
+            columns: 2 240px;
+            column-gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <a
+            href="image\Landscape\3.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Landscape\3.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Landscape\5.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Landscape\5.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Landscape\6.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Landscape\6.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Landscape\7.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Landscape\7.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+        </div>
+      </section>
+      <!--portrait-->
+      <section
+        id="portrait"
+        style="width: 100%; margin-bottom: 80px; box-sizing: border-box"
+      >
+        <div
+          style="
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 14px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+          "
+        >
+          <div>
+            <p
+              style="
+                color: #888888;
+                font-size: 11px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                margin: 0 0 6px 0;
+              "
+            >
+              Category
+            </p>
+            <h2
+              style="
+                font-size: clamp(22px, 3.5vw, 30px);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-weight: 400;
+                margin: 0;
+              "
+            >
+              Portrait & People
+            </h2>
+          </div>
+          <a
+            href="#top"
+            style="
+              color: #777777;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+            "
+            >Back to top &uarr;</a
+          >
+        </div>
+
+        <div
+          style="
+            columns: 3 240px;
+            column-gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <a
+            href="image\Portrait\6.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Portrait\6.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Portrait\7.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Portrait\7.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Portrait\5.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Portrait\5.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+        </div>
+        <div
+          style="
+            columns: 2 240px;
+            column-gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <a
+            href="image\Portrait\2.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Portrait\2.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Portrait\4.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Portrait\4.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+        </div>
+        <div
+          style="
+            columns: 3 240px;
+            column-gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <a
+            href="image\Portrait\8.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Portrait\8.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Portrait\9.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Portrait\9.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Portrait\10.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Portrait\10.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+        </div>
+        <div
+          style="
+            columns: 2 240px;
+            column-gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <a
+            href="image\Portrait\1.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Portrait\1.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Portrait\3.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Portrait\3.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+        </div>
+      </section>
+      <!--Urban-->
+      <section
+        id="urban"
+        style="width: 100%; margin-bottom: 80px; box-sizing: border-box"
+      >
+        <div
+          style="
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 14px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+          "
+        >
+          <div>
+            <p
+              style="
+                color: #888888;
+                font-size: 11px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                margin: 0 0 6px 0;
+              "
+            >
+              Category
+            </p>
+            <h2
+              style="
+                font-size: clamp(22px, 3.5vw, 30px);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-weight: 400;
+                margin: 0;
+              "
+            >
+              Urban
+            </h2>
+          </div>
+          <a
+            href="#top"
+            style="
+              color: #777777;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+            "
+            >Back to top &uarr;</a
+          >
+        </div>
+
+        <div
+          style="
+            columns: 2 210px;
+            column-gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <a
+            href="image\Urban\1.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Urban\1.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Urban\2.jpg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Urban\2.jpg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Urban\3.jpg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Urban\3.jpg"
+              alt="Photo"
+              style="width: 100%; height: 50%; display: block"
+            />
+          </a>
+          <a
+            href="image\Urban\4.jpg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Urban\4.jpg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Urban\5.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Urban\5.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Urban\6.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Urban\6.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Urban\7.JPG"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Urban\7.JPG"
+              alt="Photo"
+              style="width: 110%; height: 110%; display: block"
+            />
+          </a>
+        </div>
+      </section>
+      <!--Macro-->
+      <section
+        id="macro"
+        style="width: 100%; margin-bottom: 80px; box-sizing: border-box"
+      >
+        <div
+          style="
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 14px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+          "
+        >
+          <div>
+            <p
+              style="
+                color: #888888;
+                font-size: 11px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                margin: 0 0 6px 0;
+              "
+            >
+              Category
+            </p>
+            <h2
+              style="
+                font-size: clamp(22px, 3.5vw, 30px);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-weight: 400;
+                margin: 0;
+              "
+            >
+              Macro & Details
+            </h2>
+          </div>
+          <a
+            href="#top"
+            style="
+              color: #777777;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+            "
+            >Back to top &uarr;</a
+          >
+        </div>
+
+        <div
+          style="
+            columns: 2 240px;
+            column-gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <a
+            href="image\Macro\1.JPG"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Macro\1.JPG"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Macro\2.JPG"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Macro\2.JPG"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Macro\3.JPG"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Macro\3.JPG"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Macro\4.JPG"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Macro\4.JPG"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Macro\5.JPG"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Macro\5.JPG"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Macro\6.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Macro\6.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+        </div>
+      </section>
+
+      <section
+        id="automotive"
+        style="width: 100%; margin-bottom: 80px; box-sizing: border-box"
+      >
+        <div
+          style="
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 14px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+          "
+        >
+          <div>
+            <p
+              style="
+                color: #888888;
+                font-size: 11px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                margin: 0 0 6px 0;
+              "
+            >
+              Category
+            </p>
+            <h2
+              style="
+                font-size: clamp(22px, 3.5vw, 30px);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-weight: 400;
+                margin: 0;
+              "
+            >
+              Automotive & Moto
+            </h2>
+          </div>
+          <a
+            href="#top"
+            style="
+              color: #777777;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+            "
+            >Back to top &uarr;</a
+          >
+        </div>
+
+        <div
+          style="
+            columns: 4 240px;
+            column-gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <a
+            href="image\Automotive\2.JPG"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\2.JPG"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Automotive\3.JPG"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\3.JPG"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Automotive\10.JPG"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\10.JPG"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Automotive\12.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\12.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+        </div>
+        <div
+          style="
+            columns: 2 240px;
+            column-gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <a
+            href="image\Automotive\1.JPG"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\1.JPG"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Automotive\6.JPG"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\6.JPG"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+        </div>
+        <div
+          style="
+            columns: 4 240px;
+            column-gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <a
+            href="image\Automotive\8.JPG"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\8.JPG"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Automotive\9.JPG"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\9.JPG"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Automotive\14.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\14.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Automotive\11.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\11.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+        </div>
+        <div
+          style="
+            columns: 3 240px;
+            column-gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <a
+            href="image\Automotive\4.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\4.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Automotive\5.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\5.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Automotive\7.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\7.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+        </div>
+        <div
+          style="
+            columns: 2 240px;
+            column-gap: 16px;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <a
+            href="image\Automotive\13.JPG"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\13.JPG"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+          <a
+            href="image\Automotive\15.jpeg"
+            target="_blank"
+            style="
+              display: block;
+              break-inside: avoid;
+              margin-bottom: 16px;
+              background: #1a1a1a;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              text-decoration: none;
+              transition: transform 0.2s ease;
+            "
+            onmouseover="this.style.transform = 'scale(1.02)'"
+            onmouseout="this.style.transform = 'scale(1)'"
+          >
+            <img
+              src="image\Automotive\15.jpeg"
+              alt="Photo"
+              style="width: 100%; height: auto; display: block"
+            />
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      style="
+        background: #0d0d0d;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        width: 100%;
+        padding: 50px 4% 30px 4%;
+        box-sizing: border-box;
+        text-align: center;
+        color: #ffffff;
+        font-family: &quot;Helvetica Neue&quot;, Arial, sans-serif;
+      "
+    >
+      <div
+        style="
+          max-width: 1100px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        "
+      >
+        <a
+          href="index.html"
+          style="
+            color: #ffffff;
+            text-decoration: none;
+            font-family: &quot;Great Vibes&quot;, cursive;
+            font-size: 42px;
+            letter-spacing: 1px;
+          "
+        >
+          Focus well
+        </a>
+
+        <div
+          style="
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+          "
+        >
+          <a
+            href="index.html"
+            style="
+              color: #888888;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              transition: color 0.2s ease;
+            "
+            onmouseover="this.style.color = '#ffffff'"
+            onmouseout="this.style.color = '#888888'"
+            >Home</a
+          >
+          <a
+            href="Gallery.html"
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              transition: color 0.2s ease;
+              border-bottom: 1px solid #ffffff;
+            "
+            >Gallery</a
+          >
+          <a
+            href="Equipment.html"
+            style="
+              color: #888888;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              transition: color 0.2s ease;
+            "
+            onmouseover="this.style.color = '#ffffff'"
+            onmouseout="this.style.color = '#888888'"
+            >Equipment</a
+          >
+          <a
+            href="Aboutme.html"
+            style="
+              color: #888888;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              transition: color 0.2s ease;
+            "
+            onmouseover="this.style.color = '#ffffff'"
+            onmouseout="this.style.color = '#888888'"
+            >About Me</a
+          >
+        </div>
+
+        <div
+          style="
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <a
+            href="https://www.instagram.com/kynn_janayan/"
+            target="_blank"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.2)';
+              this.style.transform = 'translateY(-3px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 16px;
+              transition: all 0.2s ease;
+            "
+          >
+            <i class="fa fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/ken.basco.96"
+            target="_blank"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.2)';
+              this.style.transform = 'translateY(-3px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 16px;
+              transition: all 0.2s ease;
+            "
+          >
+            <i class="fa fa-facebook"></i>
+          </a>
+
+          <a
+            href="mailto:janayankarolkhodee@gmail.com"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.2)';
+              this.style.transform = 'translateY(-3px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 16px;
+              transition: all 0.2s ease;
+            "
+          >
+            <i class="fa fa-envelope-o"></i>
+          </a>
+
+          <a
+            href="#top"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.2)';
+              this.style.transform = 'translateY(-3px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 16px;
+              transition: all 0.2s ease;
+            "
+          >
+            <i class="fa fa-arrow-up"></i>
+          </a>
+        </div>
+
+        <div
+          style="
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 20px;
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            font-size: 11px;
+            color: #666666;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+          "
+        >
+          <span>&copy; Karol Khodee B. Janayan &bull; All Rights Reserved</span>
+          <span>A.Y. 2026–2027</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

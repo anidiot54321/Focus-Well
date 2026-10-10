@@ -1,0 +1,2056 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Focus Well</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Caveat:wght@500&family=Great+Vibes&family=Sacramento&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      font-family: &quot;Helvetica Neue&quot;, Arial, sans-serif;
+      box-sizing: border-box;
+      background-color: #121212;
+      color: #ffffff;
+      width: 100%;
+      overflow-x: hidden;
+    "
+  >
+    <header
+      style="
+        position: relative;
+        width: 100%;
+        min-height: 85vh;
+        background-image: url(&quot;image/Home1.jpeg&quot;);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      "
+    >
+      <nav
+        id="main-nav"
+        style="
+          position: sticky;
+          top: 0;
+          left: 0;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 4%;
+          box-sizing: border-box;
+          row-gap: 15px;
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          z-index: 1000;
+        "
+      >
+        <div
+          style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap"
+        >
+          <a
+            href="index.html"
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-family: &quot;Great Vibes&quot;, cursive;
+              font-size: 60px;
+              font-weight: normal;
+              letter-spacing: 1px;
+              line-height: 1;
+            "
+          >
+            Focus well
+          </a>
+          <p
+            style="
+              margin: 0;
+              padding-left: 16px;
+              border-left: 1px solid rgba(255, 255, 255, 0.25);
+              color: #aaaaaa;
+              font-family: &quot;Helvetica Neue&quot;, Arial, sans-serif;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              line-height: 1.4;
+              max-width: 220px;
+            "
+          >
+            Because paying attention in class clearly wasn't working
+          </p>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: clamp(10px, 2.5vw, 25px);
+            align-items: center;
+          "
+        >
+          <a
+            href="index.html"
+            onmouseover="
+              this.style.textShadow = '0 0 10px #ffffff, 0 0 20px #ffffff';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.textShadow = 'none';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: clamp(11px, 2.5vw, 13px);
+              font-weight: 500;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              opacity: 0.85;
+              display: inline-block;
+              transition: all 0.2s ease;
+              border-bottom: 2px solid #ffffff;
+              padding-bottom: 3px;
+            "
+          >
+            Home
+          </a>
+
+          <a
+            href="Gallery.html"
+            onmouseover="
+              this.style.textShadow = '0 0 10px #ffffff, 0 0 20px #ffffff';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.textShadow = 'none';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: clamp(11px, 2.5vw, 13px);
+              font-weight: 500;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              opacity: 0.85;
+              display: inline-block;
+              transition: all 0.2s ease;
+              padding-bottom: 3px;
+            "
+          >
+            Gallery
+          </a>
+
+          <div
+            onmouseover="
+              document.getElementById('tags-menu').style.display = 'flex';
+              document.getElementById('tags-btn').style.textShadow =
+                '0 0 10px #ffffff, 0 0 20px #ffffff';
+              document.getElementById('tags-btn').style.transform =
+                'translateY(-2px)';
+            "
+            onmouseout="
+              document.getElementById('tags-menu').style.display = 'none';
+              document.getElementById('tags-btn').style.textShadow = 'none';
+              document.getElementById('tags-btn').style.transform =
+                'translateY(0)';
+            "
+            style="position: relative; display: inline-block"
+          >
+            <a
+              id="tags-btn"
+              href="Gallery.html"
+              style="
+                color: #ffffff;
+                text-decoration: none;
+                font-size: clamp(11px, 2.5vw, 13px);
+                font-weight: 500;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                opacity: 0.85;
+                display: inline-block;
+                transition: all 0.2s ease;
+                padding-bottom: 3px;
+              "
+            >
+              Tags &#9662;
+            </a>
+
+            <div
+              id="tags-menu"
+              style="
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: rgba(18, 18, 18, 0.95);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 6px;
+                padding: 8px 0;
+                min-width: 160px;
+                flex-direction: column;
+                gap: 2px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+                z-index: 1000;
+              "
+            >
+              <a
+                href="Gallery.html#landscape"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Landscape</a
+              >
+              <a
+                href="Gallery.html#portrait"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Portrait</a
+              >
+              <a
+                href="Gallery.html#urban"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Urban</a
+              >
+              <a
+                href="Gallery.html#macro"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Macro</a
+              >
+              <a
+                href="Gallery.html#automotive"
+                onmouseover="
+                  this.style.background = 'rgba(255,255,255,0.12)';
+                  this.style.paddingLeft = '20px';
+                "
+                onmouseout="
+                  this.style.background = 'transparent';
+                  this.style.paddingLeft = '16px';
+                "
+                style="
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-size: 11px;
+                  letter-spacing: 1.5px;
+                  text-transform: uppercase;
+                  padding: 8px 16px;
+                  transition: all 0.2s ease;
+                  display: block;
+                "
+                >Automotive</a
+              >
+            </div>
+          </div>
+
+          <a
+            href="Equipment.html"
+            onmouseover="
+              this.style.textShadow = '0 0 10px #ffffff, 0 0 20px #ffffff';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.textShadow = 'none';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: clamp(11px, 2.5vw, 13px);
+              font-weight: 500;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              opacity: 0.85;
+              display: inline-block;
+              transition: all 0.2s ease;
+              padding-bottom: 3px;
+            "
+          >
+            Equipment
+          </a>
+
+          <a
+            href="Aboutme.html"
+            onmouseover="
+              this.style.textShadow = '0 0 10px #ffffff, 0 0 20px #ffffff';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.textShadow = 'none';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: clamp(11px, 2.5vw, 13px);
+              font-weight: 500;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              opacity: 0.85;
+              display: inline-block;
+              transition: all 0.2s ease;
+              padding-bottom: 3px;
+            "
+          >
+            About Me
+          </a>
+        </div>
+      </nav>
+      <div
+        style="
+          position: absolute;
+          bottom: 80px;
+          left: 4%;
+          max-width: 520px;
+          padding: 0 10px;
+          box-sizing: border-box;
+          z-index: 10;
+          text-align: left;
+        "
+      >
+        <p
+          style="
+            color: #bbbbbb;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin: 0 0 10px 0;
+          "
+        >
+          Personal Archive & Photography
+        </p>
+
+        <h1
+          style="
+            color: #ffffff;
+            font-size: clamp(26px, 4vw, 38px);
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin: 0 0 14px 0;
+            line-height: 1.25;
+          "
+        >
+          Learning to see, one frame at a time.
+        </h1>
+
+        <p
+          style="
+            color: #cccccc;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0 0 22px 0;
+            font-weight: 300;
+          "
+        >
+          Just a student exploring the craft of photography—experimenting with
+          light, composition, and everyday moments.
+        </p>
+
+        <a
+          href="Gallery.html"
+          onmouseover="
+            this.style.background = '#ffffff';
+            this.style.color = '#000000';
+          "
+          onmouseout="
+            this.style.background = 'transparent';
+            this.style.color = '#ffffff';
+          "
+          style="
+            display: inline-block;
+            padding: 10px 22px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.25s ease;
+          "
+        >
+          Explore Gallery
+        </a>
+      </div>
+      <div
+        style="
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 140px;
+          background: linear-gradient(
+            to bottom,
+            rgba(18, 18, 18, 0) 0%,
+            rgba(18, 18, 18, 0.4) 50%,
+            #121212 100%
+          );
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          mask-image: linear-gradient(to bottom, transparent 0%, black 80%);
+          -webkit-mask-image: linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 80%
+          );
+          pointer-events: none;
+        "
+      ></div>
+    </header>
+
+    <section id="featured" style="text-align: center; margin-bottom: 70px">
+      <p
+        style="
+          color: #888888;
+          font-size: 12px;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          margin: 0 0 10px 0;
+          padding-top: 10%;
+        "
+      >
+        Featured Capture
+      </p>
+      <h2
+        style="
+          font-size: clamp(22px, 4vw, 32px);
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          font-weight: 400;
+          margin: 0;
+        "
+      >
+        My Favorite Distraction
+      </h2>
+      <p
+        style="
+          color: #888888;
+          font-size: 12px;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          margin: 0 0 10px 0;
+          padding-top: 5px;
+        "
+      >
+        The real reason I keep bringing my camera to campus.
+      </p>
+
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          border-radius: 6px;
+          overflow: hidden;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+          border: 2px solid rgba(119, 103, 103, 0.08);
+        "
+      >
+        <img
+          src="image/Feature.jpeg"
+          alt="Featured Shot"
+          style="
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: cover;
+            display: block;
+          "
+        />
+      </div>
+    </section>
+
+    <main
+      style="
+        padding: clamp(30px, 5vw, 60px) 4%;
+        box-sizing: border-box;
+        max-width: 1300px;
+        margin: 0 auto;
+      "
+    >
+      <section
+        id="categories"
+        style="margin-bottom: 90px; width: 100%; box-sizing: border-box"
+      >
+        <div style="text-align: center; margin-bottom: 30px">
+          <p
+            style="
+              color: #888888;
+              font-size: 12px;
+              letter-spacing: 3px;
+              text-transform: uppercase;
+              margin: 0 0 10px 0;
+            "
+          >
+            Styles & Focus
+          </p>
+          <h2
+            style="
+              font-size: clamp(22px, 4vw, 32px);
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              font-weight: 400;
+              margin: 0;
+            "
+          >
+            Photography Categories
+          </h2>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+          "
+        >
+          <a
+            href="#cat-landscape"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.25)';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 12px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              padding: 7px 16px;
+              background: rgba(255, 255, 255, 0.08);
+              border-radius: 20px;
+              transition: all 0.2s ease;
+              display: inline-block;
+            "
+          >
+            Landscape
+          </a>
+          <a
+            href="#cat-portrait"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.25)';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 12px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              padding: 7px 16px;
+              background: rgba(255, 255, 255, 0.08);
+              border-radius: 20px;
+              transition: all 0.2s ease;
+              display: inline-block;
+            "
+          >
+            Portrait
+          </a>
+          <a
+            href="#cat-urban"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.25)';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 12px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              padding: 7px 16px;
+              background: rgba(255, 255, 255, 0.08);
+              border-radius: 20px;
+              transition: all 0.2s ease;
+              display: inline-block;
+            "
+          >
+            Urban
+          </a>
+          <a
+            href="#cat-macro"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.25)';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 12px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              padding: 7px 16px;
+              background: rgba(255, 255, 255, 0.08);
+              border-radius: 20px;
+              transition: all 0.2s ease;
+              display: inline-block;
+            "
+          >
+            Macro
+          </a>
+          <a
+            href="#cat-automotive"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.25)';
+              this.style.transform = 'translateY(-2px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 12px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              padding: 7px 16px;
+              background: rgba(255, 255, 255, 0.08);
+              border-radius: 20px;
+              transition: all 0.2s ease;
+              display: inline-block;
+            "
+          >
+            Automotive
+          </a>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            width: 100%;
+            border-radius: 8px;
+            box-sizing: border-box;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+          "
+        >
+          <!--landscape-->
+          <div
+            id="cat-landscape"
+            style="
+              flex: 0 0 100%;
+              min-width: 100%;
+              scroll-snap-align: center;
+              scroll-margin-top: 120px;
+              background-color: #1a1a1a;
+              padding: clamp(20px, 3vw, 35px);
+              box-sizing: border-box;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 30px;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <div style="flex: 1 1 340px; max-width: 480px">
+              <img
+                src="image/Landscape.jpg"
+                alt="Landscape"
+                style="
+                  width: 100%;
+                  height: 380px;
+                  object-fit: cover;
+                  border-radius: 6px;
+                  display: block;
+                  margin: 0 auto;
+                "
+              />
+            </div>
+            <div
+              style="
+                flex: 1 1 340px;
+                max-width: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 380px;
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    margin: 0 0 8px 0;
+                    color: #ffffff;
+                  "
+                >
+                  Landscape & Scenery
+                </h3>
+                <p
+                  style="
+                    color: #888888;
+                    font-size: 13px;
+                    line-height: 1.5;
+                    margin: 0 0 20px 0;
+                  "
+                >
+                  Capturing expansive coastal landscapes with natural contrast,
+                  where sunset horizon glows meet calm ocean waters beneath
+                  dramatic mountain silhouettes and layered skies.
+                </p>
+                <table
+                  style="
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 13px;
+                    margin-bottom: 25px;
+                  "
+                >
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        width: 38%;
+                      "
+                    >
+                      Typical Focal Length
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      24mm – 50mm (Standard Wide)
+                    </td>
+                  </tr>
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                      "
+                    >
+                      Preferred Aperture
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      f/8 – f/11 (Maximum edge-to-edge sharpness)
+                    </td>
+                  </tr>
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                      "
+                    >
+                      Key Element
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      Golden sunset glow, open ocean, dramatic cloud layering
+                      texture
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div style="margin: 0 0 22px 0">
+                <a
+                  href="Gallery.html#landscape"
+                  onmouseover="
+                    this.style.background = '#ffffff';
+                    this.style.color = '#000000';
+                    this.style.letterSpacing = '2.6px';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#ffffff';
+                    this.style.letterSpacing = '2px';
+                  "
+                  style="
+                    display: block;
+                    text-align: center;
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    border: 1px solid rgba(255, 255, 255, 0.4);
+                    border-radius: 4px;
+                    padding: 12px 22px;
+                    transition: all 0.25s ease;
+                  "
+                >
+                  View Landscape in Gallery &rarr;
+                </a>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-end;
+                  border-top: 1px solid rgba(255, 255, 255, 0.08);
+                  padding-top: 15px;
+                "
+              >
+                <a
+                  href="#cat-portrait"
+                  onmouseover="
+                    this.style.transform = 'translateY(-3px) scale(1.02)';
+                    this.style.background = 'rgba(255, 255, 255, 0.25)';
+                  "
+                  onmouseout="
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.background = 'rgba(255, 255, 255, 0.12)';
+                  "
+                  style="
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    background: rgba(255, 255, 255, 0.12);
+                    padding: 10px 22px;
+                    border-radius: 4px;
+                    display: inline-block;
+                    transition: all 0.25s ease;
+                  "
+                >
+                  Next: Portrait &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--Portrait-->
+          <div
+            id="cat-portrait"
+            style="
+              flex: 0 0 100%;
+              min-width: 100%;
+              scroll-snap-align: center;
+              scroll-margin-top: 120px;
+              background-color: #1a1a1a;
+              padding: clamp(20px, 3vw, 35px);
+              box-sizing: border-box;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 30px;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <div style="flex: 1 1 340px; max-width: 480px">
+              <img
+                src="image/Portriat.jpeg"
+                alt="Portrait"
+                style="
+                  width: 100%;
+                  height: 380px;
+                  object-fit: cover;
+                  border-radius: 6px;
+                  display: block;
+                  margin: 0 auto;
+                "
+              />
+            </div>
+            <div
+              style="
+                flex: 1 1 340px;
+                max-width: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 380px;
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    margin: 0 0 8px 0;
+                    color: #ffffff;
+                  "
+                >
+                  Portrait & People
+                </h3>
+                <p
+                  style="
+                    color: #888888;
+                    font-size: 13px;
+                    line-height: 1.5;
+                    margin: 0 0 20px 0;
+                  "
+                >
+                  Capturing spontaneous energy, playful expressions, and
+                  authentic moments using direct on-camera flash and dynamic
+                  angles to make the subject pop.
+                </p>
+                <table
+                  style="
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 13px;
+                    margin-bottom: 25px;
+                  "
+                >
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        width: 38%;
+                      "
+                    >
+                      Typical Focal Length
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      28mm – 35mm (Wide-angle)
+                    </td>
+                  </tr>
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                      "
+                    >
+                      Preferred Aperture
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      f/2.8 – f/5.6 (Sharp subject & fast flash sync)
+                    </td>
+                  </tr>
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                      "
+                    >
+                      Key Element
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      Direct flash illumination, dynamic Dutch angle, candid
+                      crowd atmosphere
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div style="margin: 0 0 22px 0">
+                <a
+                  href="Gallery.html#portrait"
+                  onmouseover="
+                    this.style.background = '#ffffff';
+                    this.style.color = '#000000';
+                    this.style.letterSpacing = '2.6px';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#ffffff';
+                    this.style.letterSpacing = '2px';
+                  "
+                  style="
+                    display: block;
+                    text-align: center;
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    border: 1px solid rgba(255, 255, 255, 0.4);
+                    border-radius: 4px;
+                    padding: 12px 22px;
+                    transition: all 0.25s ease;
+                  "
+                >
+                  View Portrait in Gallery &rarr;
+                </a>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  border-top: 1px solid rgba(255, 255, 255, 0.08);
+                  padding-top: 15px;
+                "
+              >
+                <a
+                  href="#cat-landscape"
+                  onmouseover="
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.color = '#ffffff';
+                  "
+                  onmouseout="
+                    this.style.transform = 'translateY(0)';
+                    this.style.color = '#aaaaaa';
+                  "
+                  style="
+                    color: #aaaaaa;
+                    text-decoration: none;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    padding: 10px 16px;
+                    display: inline-block;
+                    transition: all 0.25s ease;
+                  "
+                >
+                  &larr; Landscape
+                </a>
+                <a
+                  href="#cat-urban"
+                  onmouseover="
+                    this.style.transform = 'translateY(-3px) scale(1.02)';
+                    this.style.background = 'rgba(255, 255, 255, 0.25)';
+                  "
+                  onmouseout="
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.background = 'rgba(255, 255, 255, 0.12)';
+                  "
+                  style="
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    background: rgba(255, 255, 255, 0.12);
+                    padding: 10px 22px;
+                    border-radius: 4px;
+                    display: inline-block;
+                    transition: all 0.25s ease;
+                  "
+                >
+                  Next: Urban &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--Urban-->
+          <div
+            id="cat-urban"
+            style="
+              flex: 0 0 100%;
+              min-width: 100%;
+              scroll-snap-align: center;
+              scroll-margin-top: 120px;
+              background-color: #1a1a1a;
+              padding: clamp(20px, 3vw, 35px);
+              box-sizing: border-box;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 30px;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <div style="flex: 1 1 340px; max-width: 480px">
+              <img
+                src="image/Urban.jpg"
+                alt="Urban"
+                style="
+                  width: 100%;
+                  height: 380px;
+                  object-fit: cover;
+                  border-radius: 6px;
+                  display: block;
+                  margin: 0 auto;
+                "
+              />
+            </div>
+            <div
+              style="
+                flex: 1 1 340px;
+                max-width: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 380px;
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    margin: 0 0 8px 0;
+                    color: #ffffff;
+                  "
+                >
+                  Urban & Architecture
+                </h3>
+                <p
+                  style="
+                    color: #888888;
+                    font-size: 13px;
+                    line-height: 1.5;
+                    margin: 0 0 20px 0;
+                  "
+                >
+                  Capturing the historic character and visual identity of urban
+                  spaces through architectural landmarks, vintage facades, and
+                  textured streetscapes.
+                </p>
+                <table
+                  style="
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 13px;
+                    margin-bottom: 25px;
+                  "
+                >
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        width: 38%;
+                      "
+                    >
+                      Typical Focal Length
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      28mm – 50mm (Street & Environmental)
+                    </td>
+                  </tr>
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                      "
+                    >
+                      Preferred Aperture
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      f/5.6 – f/11 (Deep depth of field & crisp detail)
+                    </td>
+                  </tr>
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                      "
+                    >
+                      Key Element
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      Heritage character, high-contrast sunlight, leading lines
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div style="margin: 0 0 22px 0">
+                <a
+                  href="Gallery.html#urban"
+                  onmouseover="
+                    this.style.background = '#ffffff';
+                    this.style.color = '#000000';
+                    this.style.letterSpacing = '2.6px';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#ffffff';
+                    this.style.letterSpacing = '2px';
+                  "
+                  style="
+                    display: block;
+                    text-align: center;
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    border: 1px solid rgba(255, 255, 255, 0.4);
+                    border-radius: 4px;
+                    padding: 12px 22px;
+                    transition: all 0.25s ease;
+                  "
+                >
+                  View Urban in Gallery &rarr;
+                </a>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  border-top: 1px solid rgba(255, 255, 255, 0.08);
+                  padding-top: 15px;
+                "
+              >
+                <a
+                  href="#cat-portrait"
+                  onmouseover="
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.color = '#ffffff';
+                  "
+                  onmouseout="
+                    this.style.transform = 'translateY(0)';
+                    this.style.color = '#aaaaaa';
+                  "
+                  style="
+                    color: #aaaaaa;
+                    text-decoration: none;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    padding: 10px 16px;
+                    display: inline-block;
+                    transition: all 0.25s ease;
+                  "
+                >
+                  &larr; Portrait
+                </a>
+                <a
+                  href="#cat-macro"
+                  onmouseover="
+                    this.style.transform = 'translateY(-3px) scale(1.02)';
+                    this.style.background = 'rgba(255, 255, 255, 0.25)';
+                  "
+                  onmouseout="
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.background = 'rgba(255, 255, 255, 0.12)';
+                  "
+                  style="
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    background: rgba(255, 255, 255, 0.12);
+                    padding: 10px 22px;
+                    border-radius: 4px;
+                    display: inline-block;
+                    transition: all 0.25s ease;
+                  "
+                >
+                  Next: Macro &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--Macro-->
+          <div
+            id="cat-macro"
+            style="
+              flex: 0 0 100%;
+              min-width: 100%;
+              scroll-snap-align: center;
+              scroll-margin-top: 120px;
+              background-color: #1a1a1a;
+              padding: clamp(20px, 3vw, 35px);
+              box-sizing: border-box;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 30px;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <div style="flex: 1 1 340px; max-width: 480px">
+              <img
+                src="image/Macro.JPG"
+                alt="Macro"
+                style="
+                  width: 100%;
+                  height: 380px;
+                  object-fit: cover;
+                  border-radius: 6px;
+                  display: block;
+                  margin: 0 auto;
+                "
+              />
+            </div>
+            <div
+              style="
+                flex: 1 1 340px;
+                max-width: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 380px;
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    margin: 0 0 8px 0;
+                    color: #ffffff;
+                  "
+                >
+                  Macro & Still Life
+                </h3>
+                <p
+                  style="
+                    color: #888888;
+                    font-size: 13px;
+                    line-height: 1.5;
+                    margin: 0 0 20px 0;
+                  "
+                >
+                  Capturing the intricate craftsmanship of handmade objects and
+                  small accessories up close, balancing sharp tactile textures
+                  with clean subject isolation.
+                </p>
+                <table
+                  style="
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 13px;
+                    margin-bottom: 25px;
+                  "
+                >
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        width: 38%;
+                      "
+                    >
+                      Typical Focal Length
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      50mm – 100mm (Macro / Prime)
+                    </td>
+                  </tr>
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                      "
+                    >
+                      Preferred Aperture
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      f/4.0 – f/8.0 (Deep focus for sharp craft textures)
+                    </td>
+                  </tr>
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                      "
+                    >
+                      Key Element
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      Yarn weave texture, on-camera fill lighting, close-range
+                      framing
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div style="margin: 0 0 22px 0">
+                <a
+                  href="Gallery.html#macro"
+                  onmouseover="
+                    this.style.background = '#ffffff';
+                    this.style.color = '#000000';
+                    this.style.letterSpacing = '2.6px';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#ffffff';
+                    this.style.letterSpacing = '2px';
+                  "
+                  style="
+                    display: block;
+                    text-align: center;
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    border: 1px solid rgba(255, 255, 255, 0.4);
+                    border-radius: 4px;
+                    padding: 12px 22px;
+                    transition: all 0.25s ease;
+                  "
+                >
+                  View Macro in Gallery &rarr;
+                </a>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  border-top: 1px solid rgba(255, 255, 255, 0.08);
+                  padding-top: 15px;
+                "
+              >
+                <a
+                  href="#cat-urban"
+                  onmouseover="
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.color = '#ffffff';
+                  "
+                  onmouseout="
+                    this.style.transform = 'translateY(0)';
+                    this.style.color = '#aaaaaa';
+                  "
+                  style="
+                    color: #aaaaaa;
+                    text-decoration: none;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    padding: 10px 16px;
+                    display: inline-block;
+                    transition: all 0.25s ease;
+                  "
+                >
+                  &larr; Urban
+                </a>
+                <a
+                  href="#cat-automotive"
+                  onmouseover="
+                    this.style.transform = 'translateY(-3px) scale(1.02)';
+                    this.style.background = 'rgba(255, 255, 255, 0.25)';
+                  "
+                  onmouseout="
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.background = 'rgba(255, 255, 255, 0.12)';
+                  "
+                  style="
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    background: rgba(255, 255, 255, 0.12);
+                    padding: 10px 22px;
+                    border-radius: 4px;
+                    display: inline-block;
+                    transition: all 0.25s ease;
+                  "
+                >
+                  Next: Automotive &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--Automotive-->
+          <div
+            id="cat-automotive"
+            style="
+              flex: 0 0 100%;
+              min-width: 100%;
+              scroll-snap-align: center;
+              scroll-margin-top: 120px;
+              background-color: #1a1a1a;
+              padding: clamp(20px, 3vw, 35px);
+              box-sizing: border-box;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 30px;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <div style="flex: 1 1 340px; max-width: 480px">
+              <img
+                src="image/Automotive.jpg"
+                alt="Automotive"
+                style="
+                  width: 100%;
+                  height: 380px;
+                  object-fit: cover;
+                  border-radius: 6px;
+                  display: block;
+                  margin: 0 auto;
+                "
+              />
+            </div>
+            <div
+              style="
+                flex: 1 1 340px;
+                max-width: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 380px;
+              "
+            >
+              <div>
+                <h3
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    margin: 0 0 8px 0;
+                    color: #ffffff;
+                  "
+                >
+                  Automotive & Moto
+                </h3>
+                <p
+                  style="
+                    color: #888888;
+                    font-size: 13px;
+                    line-height: 1.5;
+                    margin: 0 0 20px 0;
+                  "
+                >
+                  Documenting the full spectrum of vehicle performance and
+                  design, blending high-speed panning motion, static long-shot
+                  silhouettes, and sleek body lines into one cohesive automotive
+                  story.
+                </p>
+                <table
+                  style="
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-size: 13px;
+                    margin-bottom: 25px;
+                  "
+                >
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        width: 38%;
+                      "
+                    >
+                      Typical Focal Length
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      50mm – 85mm (Prime / Telephoto Detail)
+                    </td>
+                  </tr>
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                      "
+                    >
+                      Preferred Aperture
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      f/2.8 – f/5.6 (Sharp line isolation & creamy background
+                      falloff)
+                    </td>
+                  </tr>
+                  <tr
+                    style="border-bottom: 1px solid rgba(255, 255, 255, 0.08)"
+                  >
+                    <td
+                      style="
+                        padding: 10px 0;
+                        color: #777777;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                      "
+                    >
+                      Key Element
+                    </td>
+                    <td style="padding: 10px 0; color: #ffffff">
+                      Panning motion blur, full-vehicle stance, reflective body
+                      contours
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div style="margin: 0 0 22px 0">
+                <a
+                  href="Gallery.html#automotive"
+                  onmouseover="
+                    this.style.background = '#ffffff';
+                    this.style.color = '#000000';
+                    this.style.letterSpacing = '2.6px';
+                  "
+                  onmouseout="
+                    this.style.background = 'transparent';
+                    this.style.color = '#ffffff';
+                    this.style.letterSpacing = '2px';
+                  "
+                  style="
+                    display: block;
+                    text-align: center;
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    border: 1px solid rgba(255, 255, 255, 0.4);
+                    border-radius: 4px;
+                    padding: 12px 22px;
+                    transition: all 0.25s ease;
+                  "
+                >
+                  View Automotive in Gallery &rarr;
+                </a>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  border-top: 1px solid rgba(255, 255, 255, 0.08);
+                  padding-top: 15px;
+                "
+              >
+                <a
+                  href="#cat-macro"
+                  onmouseover="
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.color = '#ffffff';
+                  "
+                  onmouseout="
+                    this.style.transform = 'translateY(0)';
+                    this.style.color = '#aaaaaa';
+                  "
+                  style="
+                    color: #aaaaaa;
+                    text-decoration: none;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    padding: 10px 16px;
+                    display: inline-block;
+                    transition: all 0.25s ease;
+                  "
+                >
+                  &larr; Macro
+                </a>
+                <a
+                  href="#cat-landscape"
+                  onmouseover="
+                    this.style.transform = 'translateY(-3px) scale(1.02)';
+                    this.style.background = 'rgba(255, 255, 255, 0.25)';
+                  "
+                  onmouseout="
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.background = 'rgba(255, 255, 255, 0.12)';
+                  "
+                  style="
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    background: rgba(255, 255, 255, 0.12);
+                    padding: 10px 22px;
+                    border-radius: 4px;
+                    display: inline-block;
+                    transition: all 0.25s ease;
+                  "
+                >
+                  Back to First &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      style="
+        background: #0d0d0d;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        width: 100%;
+        padding: 50px 4% 30px 4%;
+        box-sizing: border-box;
+        text-align: center;
+        color: #ffffff;
+        font-family: &quot;Helvetica Neue&quot;, Arial, sans-serif;
+      "
+    >
+      <div
+        style="
+          max-width: 1100px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 24px;
+        "
+      >
+        <a
+          href="index.html"
+          style="
+            color: #ffffff;
+            text-decoration: none;
+            font-family: &quot;Great Vibes&quot;, cursive;
+            font-size: 42px;
+            letter-spacing: 1px;
+          "
+        >
+          Focus well
+        </a>
+
+        <div
+          style="
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            justify-content: center;
+          "
+        >
+          <a
+            href="index.html"
+            style="
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              transition: color 0.2s ease;
+              border-bottom: 1px solid #ffffff;
+            "
+            >Home</a
+          >
+          <a
+            href="Gallery.html"
+            style="
+              color: #888888;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              transition: color 0.2s ease;
+            "
+            onmouseover="this.style.color = '#ffffff'"
+            onmouseout="this.style.color = '#888888'"
+            >Gallery</a
+          >
+          <a
+            href="Equipment.html"
+            style="
+              color: #888888;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              transition: color 0.2s ease;
+            "
+            onmouseover="this.style.color = '#ffffff'"
+            onmouseout="this.style.color = '#888888'"
+            >Equipment</a
+          >
+          <a
+            href="Aboutme.html"
+            style="
+              color: #888888;
+              text-decoration: none;
+              font-size: 11px;
+              letter-spacing: 1.5px;
+              text-transform: uppercase;
+              transition: color 0.2s ease;
+            "
+            onmouseover="this.style.color = '#ffffff'"
+            onmouseout="this.style.color = '#888888'"
+            >About Me</a
+          >
+        </div>
+
+        <div
+          style="
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <a
+            href="https://www.instagram.com/kynn_janayan/"
+            target="_blank"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.2)';
+              this.style.transform = 'translateY(-3px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 16px;
+              transition: all 0.2s ease;
+            "
+          >
+            <i class="fa fa-instagram"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/ken.basco.96"
+            target="_blank"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.2)';
+              this.style.transform = 'translateY(-3px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 16px;
+              transition: all 0.2s ease;
+            "
+          >
+            <i class="fa fa-facebook"></i>
+          </a>
+
+          <a
+            href="mailto:janayankarolkhodee@gmail.com"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.2)';
+              this.style.transform = 'translateY(-3px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 16px;
+              transition: all 0.2s ease;
+            "
+          >
+            <i class="fa fa-envelope-o"></i>
+          </a>
+
+          <a
+            href="#top"
+            onmouseover="
+              this.style.background = 'rgba(255,255,255,0.2)';
+              this.style.transform = 'translateY(-3px)';
+            "
+            onmouseout="
+              this.style.background = 'rgba(255,255,255,0.08)';
+              this.style.transform = 'translateY(0)';
+            "
+            style="
+              width: 38px;
+              height: 38px;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.08);
+              border: 1px solid rgba(255, 255, 255, 0.1);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #ffffff;
+              text-decoration: none;
+              font-size: 16px;
+              transition: all 0.2s ease;
+            "
+          >
+            <i class="fa fa-arrow-up"></i>
+          </a>
+        </div>
+
+        <div
+          style="
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 20px;
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            font-size: 11px;
+            color: #666666;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+          "
+        >
+          <span>&copy; Karol Khodee B. Janayan &bull; All Rights Reserved</span>
+          <span>A.Y. 2026–2027</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
